@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.136
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TwitterFeed", "TwitterFeed\TwitterFeed.csproj", "{7B77CF1C-4F4D-4F78-BAE0-C9270A32BD0E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TwitterFeed.Core", "TwitterFeed.Core\TwitterFeed.Core.csproj", "{42270A41-094A-4F1E-B38B-255174C2C85C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TwitterFeed.Common", "TwitterFeed.Common\TwitterFeed.Common.csproj", "{7651D0DB-0613-4934-ABED-680C00EEF927}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7B77CF1C-4F4D-4F78-BAE0-C9270A32BD0E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7B77CF1C-4F4D-4F78-BAE0-C9270A32BD0E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7B77CF1C-4F4D-4F78-BAE0-C9270A32BD0E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7B77CF1C-4F4D-4F78-BAE0-C9270A32BD0E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{42270A41-094A-4F1E-B38B-255174C2C85C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{42270A41-094A-4F1E-B38B-255174C2C85C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{42270A41-094A-4F1E-B38B-255174C2C85C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{42270A41-094A-4F1E-B38B-255174C2C85C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7651D0DB-0613-4934-ABED-680C00EEF927}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7651D0DB-0613-4934-ABED-680C00EEF927}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7651D0DB-0613-4934-ABED-680C00EEF927}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7651D0DB-0613-4934-ABED-680C00EEF927}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C4FDDE5C-0A36-46B2-9077-E482B5412578}
+	EndGlobalSection
+EndGlobal
