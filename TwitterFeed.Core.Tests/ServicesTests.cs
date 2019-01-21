@@ -67,5 +67,6 @@ namespace TwitterFeed.Core.Tests
 
 			_twitterFeedService.CreateFeed(users, tweets);
 		}
+
 	}
 }

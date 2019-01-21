@@ -77,7 +77,14 @@ namespace TwitterFeed.Core.Services.FileParser
 							var user = users.Find(u => u.Name == tweetLine[0].Trim());
 							if(user != null)
 							{
-								tweets.Add(TweetFactory.CreateTweet(user, tweetLine[1]));
+								if (tweetLine[1].Trim().Length <= 140)
+								{
+									tweets.Add(TweetFactory.CreateTweet(user, tweetLine[1].Trim()));
+								}
+								else
+								{
+									_logger.Error("Invalid tweet length, can only accept up to 140 characters long tweet.");
+								}
 							}
 						} else
 						{
