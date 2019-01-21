@@ -8,6 +8,8 @@ namespace TwitterFeed.Core.Services.FileParser
 {
 	public interface IFileParserService
 	{
-		List<TwitterEntityBase> Parse(string filePath);
+		List<User> ParseUser(string filePath);
+		List<Tweet> ParseTweet(string filePath, List<User> users);
+
 	}
 }
