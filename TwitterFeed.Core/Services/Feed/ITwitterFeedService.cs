@@ -2,12 +2,11 @@
 using System.Collections.Generic;
 using System.Text;
 using TwitterFeed.Core.Entities;
-using TwitterFeed.Core.Enums;
 
 namespace TwitterFeed.Core.Services.Feed
 {
 	public interface ITwitterFeedService
 	{
-		void CreateFeed(List<User> users, List<Tweet> tweets, PrintOrder printOrder);
+		void CreateFeed(List<User> users, List<Tweet> tweets);
 	}
 }
