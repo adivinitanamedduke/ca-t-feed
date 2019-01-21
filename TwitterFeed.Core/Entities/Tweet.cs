@@ -1,6 +1,6 @@
 namespace TwitterFeed.Core.Entities
 {
-	public class Tweet : TwitterEntityBase
+	public class Tweet
 	{
 		public string Message { get; set; }
 

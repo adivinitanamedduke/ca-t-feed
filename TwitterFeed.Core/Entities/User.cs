@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 namespace TwitterFeed.Core.Entities
 {
-	public class User : TwitterEntityBase, IComparable<User>
+	public class User : IComparable<User>
 	{
 		public string Name { get; set; }
 		public List<User> Followers { get; set; }
@@ -16,15 +16,6 @@ namespace TwitterFeed.Core.Entities
 		{
 			Name = name;
 			Followers = new List<User>();
-		}
-		public override int GetHashCode()
-		{
-			return Name.GetHashCode();
-		}
-
-		public bool Equals(User other)
-		{
-			return other == null && this.Name.Equals(other.Name);
 		}
 
 		public int CompareTo(User other)
