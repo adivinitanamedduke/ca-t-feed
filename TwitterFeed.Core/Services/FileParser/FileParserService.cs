@@ -19,14 +19,13 @@ namespace TwitterFeed.Core.Services.FileParser
 			_logger = logger;
 		}
 
-		public List<User> ParseUser(string filePath)
+		public List<User> ParseUser(StreamReader streamReader)
 		{
 			try
 			{
-				using (StreamReader file = new System.IO.StreamReader(filePath))
+				using (StreamReader file = streamReader)
 				{
 					string line;
-
 					SortedSet<User> userList = new SortedSet<User>();
 					while ((line = file.ReadLine()) != null)
 					{
@@ -42,9 +41,13 @@ namespace TwitterFeed.Core.Services.FileParser
 							//Set up follower list
 							for (int i = usersInLine.Length - 1; i > 0; i--)
 							{
-								var user = userList.Single(u => (u as User).Name == usersInLine[i].Trim());
-								(user as User).Followers.Add(userList.Single(f => (f as User).Name == usersInLine[0].Trim()) as User); 
+								var user = userList.Single(u => u.Name == usersInLine[i].Trim());
+								user.Followers.Add(userList.Single(f => f.Name == usersInLine[0].Trim())); 
 							}
+						}
+						else
+						{
+							_logger.Error("Invalid line, no users in line.");
 						}
 					}
 					return userList.ToList();
@@ -57,15 +60,14 @@ namespace TwitterFeed.Core.Services.FileParser
 			return null;
 		}
 
-		public List<Tweet> ParseTweet(string filePath, List<User> users)
+		public List<Tweet> ParseTweet(StreamReader streamReader, List<User> users)
 		{
 			try
 			{
-				using (StreamReader file = new System.IO.StreamReader(filePath))
+				using (StreamReader file = streamReader)
 				{
 					//TODO: File processing
 					string line;
-
 					List<Tweet> tweets = new List<Tweet>();
 					while ((line = file.ReadLine()) != null)
 					{
@@ -77,6 +79,9 @@ namespace TwitterFeed.Core.Services.FileParser
 							{
 								tweets.Add(TweetFactory.CreateTweet(user, tweetLine[1]));
 							}
+						} else
+						{
+							_logger.Error("Invalid tweet, has invalid number of entries");
 						}
 					}
 					return tweets;

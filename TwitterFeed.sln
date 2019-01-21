@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TwitterFeed", "TwitterFeed\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TwitterFeed.Core", "TwitterFeed.Core\TwitterFeed.Core.csproj", "{42270A41-094A-4F1E-B38B-255174C2C85C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TwitterFeed.Core.Tests", "TwitterFeed.Core.Tests\TwitterFeed.Core.Tests.csproj", "{CDC4DDD6-2EC5-441B-AA09-BE32A42C548A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{42270A41-094A-4F1E-B38B-255174C2C85C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{42270A41-094A-4F1E-B38B-255174C2C85C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{42270A41-094A-4F1E-B38B-255174C2C85C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CDC4DDD6-2EC5-441B-AA09-BE32A42C548A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CDC4DDD6-2EC5-441B-AA09-BE32A42C548A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CDC4DDD6-2EC5-441B-AA09-BE32A42C548A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CDC4DDD6-2EC5-441B-AA09-BE32A42C548A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

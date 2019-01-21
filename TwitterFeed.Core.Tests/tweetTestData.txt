@@ -1,0 +1,5 @@
+Zach> If you have a procedure with 10 parameters, you probably missed some.
+Mat> There are only two hard things in Computer Science: cache invalidation, naming things and off-by-1 errors.
+Zach> Random numbers should not be generated with a method chosen at random.
+Mat> There are only two hard things in Computer Science: cache invalidation, naming things and off-by-1 errors. Random numbers should not be generated with a method chosen at random? You copied it from somewhere.
+Martin>If you have a procedure with 10 parameters, you probably missed some.

@@ -36,8 +36,8 @@ namespace TwitterFeed
 				Guard.NotNullOrEmpty(tweetFile);
 
 				var processFileService = serviceProvider.GetRequiredService<IFileParserService>();
-				processFileService.ParseUser(userFile).ForEach(u => users.Add(u as User));
-				processFileService.ParseTweet(tweetFile, users).ForEach(t => tweets.Add(t as Tweet));
+				processFileService.ParseUser(new System.IO.StreamReader(userFile)).ForEach(u => users.Add(u as User));
+				processFileService.ParseTweet(new System.IO.StreamReader(tweetFile), users).ForEach(t => tweets.Add(t as Tweet));
 
 				var feed = serviceProvider.GetService<ITwitterFeedService>();
 				feed.CreateFeed(users, tweets);
