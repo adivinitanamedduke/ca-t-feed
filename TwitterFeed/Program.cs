@@ -2,6 +2,7 @@
 
 using System;
 using System.Collections.Generic;
+using TwitterFeed.Core.Concepts;
 using TwitterFeed.Core.Entities;
 using TwitterFeed.Core.Logging;
 using TwitterFeed.Core.Services.Feed;
@@ -35,11 +36,12 @@ namespace TwitterFeed
 				Guard.NotNullOrEmpty(tweetFile);
 
 				var processFileService = serviceProvider.GetRequiredService<IFileParserService>();
-				processFileService.Parse(userFile).ForEach(u => users.Add(u as User));
-				processFileService.Parse(tweetFile).ForEach(t => tweets.Add(t as Tweet));
+				processFileService.ParseUser(userFile).ForEach(u => users.Add(u as User));
+				processFileService.ParseTweet(tweetFile, users).ForEach(t => tweets.Add(t as Tweet));
 
 				var feed = serviceProvider.GetService<ITwitterFeedService>();
 				feed.CreateFeed(users, tweets);
+				Console.Read();
 
 			}
 			else
