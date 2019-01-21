@@ -7,6 +7,7 @@ namespace TwitterFeed.Core.Services.Printing
 {
 	public interface ITwitterPrintService
 	{
-		void printTweetsByUser(User user, List<Tweet> tweets);
+		void printTweet(Tweet tweet);
+		void printUser(User user);
 	}
 }
